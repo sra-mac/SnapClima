@@ -81,8 +81,8 @@ function changeDataDisplay(data){
     weatherIcon.src = `./assets/${icon}.svg`;
     weatherDescription.textContent = description;
     currentTemperature.textContent = `${Math.round(temp)}ºC`;
-    windSpeed.textContent = `${Math.round(speed * 3.6)}km`;
-    fellsLikeTemperature.textContent =  `${Math.round(feels_like)}`;
+    windSpeed.textContent = `${Math.round(speed * 3.6)}km/h`;
+    fellsLikeTemperature.textContent =  `${Math.round(feels_like)}ºC`;
     currentHumidity.textContent = `${humidity}%`;
     sunriseTime.textContent = formatTime(sunrise);
     sunsetTime.textContent = formatTime(sunset);
