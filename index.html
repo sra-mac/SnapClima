@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,49 +15,50 @@
 <body>
     <header class="header">
         <div class="header__city-search-bar">
-            <input class="header__input" type="text" placeholder="Temperatura de qual cidade?">
+            <input id="city-search-input" class="header__input" type="text" placeholder="Temperatura de qual cidade?">
             <button  class="header__button">
-                <img src="./assets/search-icon.svg" alt="Pesquisa" class="header__button-icon">
+                <img src="./assets/search-icon.svg" alt="Pesquisa" class="header__button-icon" id="city-search-button">
             </button>
         </div>
 
-        <div class="header__current-date">data_hoje</div>
-        <div class="header__city-name">cidade_atual</div>
+        <div class="header__current-date" id="current-date" >...</div>
+        <div class="header__city-name" id="current-city" >...</div>
     </header>
 
     <section class="current_temperature">
-        <img src="./assets/loading-icon.svg" alt="" class="current_temperature__weather-icon">
-        <div class="current_temperature__description">descricao</div>
-        <div class="current_temperature__info-label">Tempo Agora</div>
-        <div class="current_temperature__current-temperature">temperatura</div>
+        <img id="weather-icon" src="./assets/loading-icon.svg" alt="Temperatura atual" aria-hidden="true" class="current_temperature__weather-icon">
+        <div id="weather-description" class="current_temperature__description">...</div>
+        <div class="current_temperature__info-label">Tempo agora</div>
+        <div id="current-temperature" class="current_temperature__current-temperature">...</div>
     </section>
 
     <div class="bottom-container">
         <section class="temperature-details">
             <div class="temperature-details__item">
                 <div class="temperature-details__label">Vento</div>
-                <div class="temperature-details__value">velocidade</div>
+                <div id="wind-speed" class="temperature-details__value">...</div>
             </div>
             <div class="temperature-details__item">
                 <div class="temperature-details__label">Sensação</div>
-                <div class="temperature-details__value">temperatura</div>
+                <div id="feels-like-temperature" class="temperature-details__value">...</div>
             </div>
             <div class="temperature-details__item">
                 <div class="temperature-details__label">Umidade</div>
-                <div class="temperature-details__value">porcentagem</div>
+                <div id="current-humidity" class="temperature-details__value">...</div>
             </div>
         </section>
 
         <section class="sunset-sunrise">
             <div class="sunset-sunrise__item">
                 <img class="sunset-sunrise__icon" src="./assets/sunrise.svg" alt="Nascer do Sol">
-                <div class="sunset-sunrise__value">horario1</div>
+                <div id="sunrise-time" class="sunset-sunrise__value">...</div>
             </div>
             <div class="sunset-sunrise__item">
                 <img class="sunset-sunrise__icon" src="./assets/sunset.svg" alt="Pôr do Sol">
-                <div class="sunset-sunrise__value">horario2</div>
+                <div id="sunset-time" class="sunset-sunrise__value">...</div>
             </div>
         </section>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
