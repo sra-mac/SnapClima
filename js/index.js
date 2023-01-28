@@ -39,7 +39,7 @@ navigator.geolocation.getCurrentPosition(
 
 function getCityWeather(cityName){
     weatherIcon.src = `./assets/loading-icon.svg`;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metrics&lang=pt_br&appid=${api_key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=pt_br&appid=${api_key}`)
     .then((response)=> response.json())//convertendo dados da api em json
     .then((data) => changeDataDisplay(data))
 }
@@ -47,7 +47,7 @@ function getCityWeather(cityName){
 
 
 function getCurrentLocationWeather(lat, lon){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metrics&lang=pt_br&appid=${api_key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${api_key}`)
     .then((response)=> response.json())//convertendo dados da api em json
     .then((data) => changeDataDisplay(data))
 }
@@ -66,7 +66,7 @@ function getCurrentLocationWeather(lat, lon){
 //     sunsetTime.innerHTML = data.sys.sunset;
 // }
 function changeDataDisplay(data){
-
+	/*desestruturação do objeto, pegando só o que irá utilizar*/
     let {
         dt,
         name,
