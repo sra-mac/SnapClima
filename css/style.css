@@ -85,6 +85,10 @@ body{
     margin-top: 15px;
 }
 
+.current_temperature__description::first-letter{
+    text-transform: uppercase;
+}
+
 .current_temperature__description{
     color: #b6aef0;
     font-weight: 500;
